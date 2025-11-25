@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Här Kommer UppfinnarJohanna!</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="grid-container single-book-grid">
+        <div class="hide-on-mobile">
+            <img src="../bilderbocker/har kommer uppfinnarjohanna ann-christine magnusson.jpg" alt="Här Kommer UppfinnarJohanna!">
+        </div>
+
+        <div >
+            <img src="../extra/harkommeruppfinnarjohanna.jpg" alt="UppfinnarJohanna!">
+        </div>
+        
+        <div class="text-block">
+            <p class="title">Här Kommer UppfinnarJohanna!</p>
+            <p>Ann-Christine Magnusson & Lovisa Lesse</p>
+            <br>
+            <p>
+                Simsala fnatt, håll er för skratt!
+                UppfinnarJohanna ska bli världens bästa uppfinnare. Idag tänker hon prova sin nya uppfinning på stans suraste gubbe, Surolle. Det kan bara inte misslyckas. Småbrorsorna Sten och Stanley följer med.            </p>
+            <br>
+        
+            <a href="https://olika.nu/products/har-kommer-uppfinnarjohanna?_pos=4&_sid=bc170ed65&_ss=r">Till Butik ></a>
+        </div>
+    </main>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px';
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

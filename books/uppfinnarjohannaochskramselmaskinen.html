@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Fart, UppfinnarJohanna!</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="grid-container single-book-grid">
+        <div class="hide-on-mobile">
+            <img src="../bilderbocker/uppfinnarjohanna och skramselmaskinen ann-christine magnusson.jpg" alt="UppfinnarJohanna och skrämselmaskinen">
+        </div>
+
+        <div >
+            <img src="../extra/UJochskramselmaskinen3.jpg" alt="UppfinnarJohanna!">
+        </div>
+        
+        <div class="text-block">
+            <p class="title">UppfinnarJohanna och skrämselmaskinen</p>
+            <p>Ann-Christine Magnusson & Lovisa Lesse</p>
+            <br>
+            <p>
+                En docka, broccoli och ett platsskelett – vad kan det bli?!
+
+                Åh! Johanna blir så arg! Vadå för liten för att vara med? Johanna bestämmer sig för att uppfinna en skrämselmaskin. En maskin som ska få tyst på alla taskmörtar och “du får inte va’ med-typer”.
+            
+            </p>
+            <br>
+        
+            <a href="https://olika.nu/products/uppfinnarjohanna-skramselmaskinen?srsltid=AfmBOopnl8a-LqK4DCRLgPhEo658elGtDgRjvtP9M_XGPIy-jevmMtHm">Till Butik ></a>
+        </div>
+    </main>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px';
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

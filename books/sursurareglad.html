@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sur, surare, glad</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="grid-container single-book-grid">
+        <div>
+            <img src="../bilderbocker/sur surare glad ann-christine magnusson.jpg" alt="Sur, surare, glad">
+        </div>
+        
+        <div class="text-block">
+            <p class="title">Sur, surare, glad</p>
+            <p>Ann-Christine Magnusson & Tomas Nilsson</p>
+            <br>
+            <p>
+                På ett roligt sätt med häftiga bilder får vi följa en smittande känsla. Den börjar som en klump i magen. En klump fylld med obehag och dåligt humör. En sån klump smittar så lätt, från en arg kassörska till en lärare till en klass och så vidare. Men mitt i boken vänder det. När Alva blivit smittad med det usla humöret ramlar hon och byxan går sönder. Men då kommer Krille, han tröstar och bjuder på bullar. Och så vänder det. Tänk så viktigt är det hur vi behandlar andra människor.
+                    <br><br>
+            </p>
+           
+        
+        </div>
+        <div class="text-block-3">
+            <p><i>"Charmig börja läsa bok. En berättalse som man blir riktigt varm av."</i><br>
+            – Smålands Tidningen
+            <br><br>
+            <i>"Tänk vad humör kan sprida sej! Det här en riktigt bra lästräningsbok"</i><br>
+            – Piteå Tidningen Boktips<br><br>
+            </p>
+        </div>
+    </main>
+    
+   
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

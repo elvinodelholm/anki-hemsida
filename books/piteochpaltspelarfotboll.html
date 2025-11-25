@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pite och Palt spelar fotboll</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="grid-container single-book-grid">
+        
+        <div class="image-container">
+            <img src="../bilderbocker/pite och palt spelar fotboll ann-christine magnusson.jpg" alt="Pite och Palt spelar fotboll">
+        </div>
+        <div class="text-block">
+            <p class="title">Pite och Palt spelar fotboll</p>
+            <p>Ann-Christine Magnusson & Paola Ciliberto</p>
+            <br>
+            <p>
+                Det är kul att spela fotboll, tycker Pite och Palt. 
+                Men så kommer Fotbollsbäver och börjar bestämma. Men 
+                det är inte alltid som Pite och Palt gör som Fotbollsbäver säger...
+            </p>
+            <br>
+        
+            <a href=https://www.adlibris.com/se/ljudbok/pite-och-palt-spelar-fotboll-9789172267602>Till Butik ></a><br><br><br><br>
+        </div>
+        <div class="text-block-3">
+            <p>
+            <i>"Diskret knäpp och galen är den smäckra boken."</i><br>
+            – Dagens Nyheter<br><br>
+            <i>"En underbar berättelse för de mindre barnen och deras föräldrar."</i><br>
+            – Bibiotekstjänst<br><br>
+            <i>"Ger varm uppmuntran åt alla små som dagligdags har att försvara sin självständighet"</i><br
+            >– Förskolan<br><br>
+            <i>"Det är sällan vi skrattat så mycket!"</i><br>– Hemmets veckotidning
+            <br><br>
+        </p>
+        </div>
+       
+    </main>
+    
+   
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

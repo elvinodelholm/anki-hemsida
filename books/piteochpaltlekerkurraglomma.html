@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pite och Palt leker kurraglömma</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="../bilderbocker/pite och palt leker kurraglomma ann-christine magnusson.jpg" alt="pite och palt leker kurragömma">
+        </div>
+       
+        <div class="text-block">
+            <p class="title">Pite och Palt leker kurraglömma</p>
+            <p>Ann-Christine Magnusson & Paola Ciliberto</p>
+            <br>
+            <p>
+                Fixar-Haren och de andra tuffa sitter under ett träd med sina mobiler. 
+                När Pite och Palt kommer fram säger de <i>Försvinn innan jag räknat till tre!</i>. 
+                Kul, tänker Pite och Palt. De vill leka kurragömma. De springer genast iväg och gömmer sig. 
+                Efter några dåliga ställen hittar de ett superställe under en filt. 
+                Men den råkar ligga på Lantbrukar-Lenas flak, och hon ska snart köra iväg.
+               <br><br> <a href="https://www.adlibris.com/se/ljudbok/pite-och-palt-leker-kurraglomma-9789172267619">Till Butik ></a>
+            <br><br></p>
+        </div>
+        <div class="text-block-3">
+            <p><i>"En fartfylld historia om hur lek kan bli roligt även om man inte får bestämma allt själv."</i><br>
+            – Barnens Bibliotek</p><br><br><br><br>
+            </p>
+        </div>
+    </main>
+    
+   
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

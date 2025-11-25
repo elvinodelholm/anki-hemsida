@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pite och Palt rymmer</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="../bilderbocker/pite och palt rymmer ann-christine magnusson.jpg" alt="pite och palt leker kurragömma">
+        </div>
+    
+        <div class="text-block">
+            <p class="title">Pite och Palt rymmer</p>
+            <p>Ann-Christine Magnusson & Paola Ciliberto</p>
+            <br>
+            <p>
+                Pite och Palt brukar ha roligt ihop, men den här morgonen blir allt tokigt. 
+                De bara bråkar, och rätt vad det är har båda bestämt sig för att rymma hemifrån. 
+                Fastän de rymmer åt var sitt håll, hamnar de ändå på samma plats i skogen. Det är 
+                när de försöker lämna varandra som de stora problemen börjar.
+            </p>
+            <br>
+            
+            <a href="https://www.adlibris.com/se/ljudbok/pite-och-palt-rymmer-9789172267633">Till Butik ></a><br><br>
+        </div>
+        <div class="text-block-3">
+            <p><i>"En bok som barnen nog knappt få ha ifred för sina föräldrar. Vem kan motstå denna charmiga dialog på bill och bull-maner?"</i><br>
+            – Bibliotekstjänst<br><br>
+            <i>"I all sin roande enkelhet sätter hon fingret på något som är väsentligt i alla relationer."</i><br>
+            – Borås tidningar<br><br>
+            </p>
+        </div>
+    </main>
+    
+   
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upp och hoppa UppfinnarJohanna!</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="grid-container single-book-grid">
+        <div class="hide-on-mobile">
+            <img src="../bilderbocker/upp och hoppa, uppfinnarjohanna ann-christine magnusson.jpg" alt="Upp och hoppa UppfinnarJohanna!">
+        </div>
+
+        <div >
+            <img src="../extra/uppochhoppa.jpg" alt="UppfinnarJohanna!">
+        </div>
+        
+        <div class="text-block">
+            <p class="title">Upp och hoppa UppfinnarJohanna!</p>
+            <p>Ann-Christine Magnusson & Lovisa Lesse</p>
+            <br>
+            <p>
+                Johannas småsyskon Sten och Stanley är så trötta att de kommer försent nästan varje dag till skolan! Här behövs en uppfinning. Johanna gör en ritning och plockar fram lite saker som kan behövas, en såg, brädor och en tuta. Upp och hoppa utan tjat, det fixar min väckningsapparat!            </p>
+            <br>
+        
+            <a href="https://olika.nu/products/upp-hoppa-uppfinnarjohanna?_pos=3&_sid=bc170ed65&_ss=r">Till Butik ></a>
+        </div>
+    </main>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px';
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

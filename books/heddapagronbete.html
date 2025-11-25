@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hedda på grönbete</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="grid-container single-book-grid">
+        <div >
+            <img src="../bilderbocker/hedda pa gronbete ann-christine magnusson.jpg" alt="Hedda på grönbete">
+        </div>
+        
+        <div class="text-block">
+            <p class="title">Hedda på grönbete</p>
+            <p>Ann-Christine Magnusson & Mimmi Tollerup</p>
+            <br>
+            <p>
+                Fröken och pappa tycker att Hedda är slarvig, glömmer och tappar bort saker, babblar för mycket. Att hon är för vild och borde lugna ner sig. Hedda fattar inte vad de pratar om. Hon tycker bara att livet kan vara så fantastiskt roligt så det spritter i henne och då är det svårt att sitta stilla. Då vill hon bara fara runt som en raket.
+            </p>
+            <br>
+        
+        </div>
+    </main>
+    
+   
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>
