@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="index.html">Bilderböcker</a>
+                <a href="spanning.html">Spänning</a>
+                <a href="skapandeskola.html">Skapande Skola</a>
+                <a href="teatertv.html">Teater & Tv</a>
+                <a href="about.html">Om Mig</a>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="grid-container single-book-grid">
+        <div class="hide-on-mobile">
+            <img src="extra/books ann-christine magnusson.jpg" alt="pite och palt leker kurragömma">
+        </div>
+        <div class="image-container">
+            <img src="extra/ann-christine magnusson 2.jpg" alt="pite och palt leker kurragömma">
+        </div>
+        <div class="text-block">
+            <p class="title">Om Mig</p>
+            <br>
+        <p>I mitt arbete som författare, dramatiker, regissör och pedagog tycker jag att det är viktigt att belysa, utmana och påverka de rådande normer och värderingar som finns. Det finns så mycket förväntningar på barn och unga som bygger på gamla värderingar om klass och kön. Jag vill minimera de där begränsningarna vad gäller ungas drömmar, ge dem mod att ifrågasätta och kraft att utforska sig själva och den värld de lever i. Få dem att både ta del av andras berättelser men också att ge dem verktyg att berätta sina egna historier! Det är stora ord, men min drivkraft är stark.</p>
+            <br>
+            <p>Vill du komma i kontakt med mig?</p>
+            <p>ankiliimagnusson@gmail.com</p>
+        </div>
+    </main>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>
