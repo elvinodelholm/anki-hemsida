@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilderböcker</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="bright">
+    <header class="bright">
+        <h1><a href="index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="index.html">Bilderböcker</a>
+                <a href="spanning.html">Spänning</a>
+                <a href="skapandeskola.html">Skapande Skola</a>
+                <a href="teatertv.html">Teater & Tv</a>
+                <a href="about.html">Om Mig</a>
+
+            </nav>
+        </div>
+    </header>
+    <main class="grid-container">
+        <div class="image-container">
+            <a href="teatertv/nya skor.html">
+                <img src="teatertv assets/nya-skor ann-christine magnusson.JPG" alt="pite och palt leker kurraglömma">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="teatertv/ata sjalv.html">
+                <img src="teatertv assets/ata-sjalv ann-christine magnusson.JPG" alt="pite och palt tar bussen">
+            </a>
+        </div> 
+        <div class="image-container">
+            <a href="teatertv/tappa tand.html">
+                <img src="teatertv assets/tappa-tand ann-christine magnusson.JPG" alt="pite och palt tar bussen">
+            </a>
+        </div>  
+        <div class="image-container">
+            <a href="teatertv/uppfinnarjohannatv.html">
+                <img src="teatertv assets/uppfinnarjohanna ann-christine magnusson.gif" alt="pite och palt på kalas">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="teatertv/nyfikenpasverige.html">
+                <img src="teatertv assets/nyfiken pa sverige ann-christine magnusson.gif" alt="pite och palt spelar fotboll">
+            </a>
+        </div>
+       
+
+       
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+    
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>
