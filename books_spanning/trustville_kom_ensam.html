@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trustville Kom Ensam</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="dark">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="../spanning/trustville kom ensam ann-christine magnusson.jpg" alt="trustville kom ensam">
+        </div>
+        <div class="text-block">
+            <p class="title">Trustville 1 – Kom Ensam</p>
+            <p>Ann-Christine Magnusson & Anna Knutsson</p>
+            <br>
+            <p>Trustville är en liten håla i norra USA. Året är 1996. För 14 år sedan hände en tragisk olycka på Trustville Middleschool. En olycka som ingen vill minnas. Allra minst nu när skolan ska ha ett stort jubileum. Så det som hände den ödesdigra dagen är glömt och begravet.
+                <br><br>
+                I Kom ensam får vi lära känna Jill. Hon är tolv år och utsatt för dagliga kränkningar av sina klasskompisar. När det känns som mörkast dyker en tjej upp som säger att hon kommer att hjälpa Jill att hämnas på sina plågoandar.</p>
+            <br>
+            <a href=https://www.bokus.com/bok/9789172263994/kom-ensam/>Till Butik ></a><br>
+        </div>
+        <div class="text-block-2">
+            <p><i>”En riktig nagelbitare”</i><br>
+                – Dags för bokprat<br>
+                <br>
+               <i>”Den här boken håller en verkligen på tårna ända till slutet, det blir bara mer och mer spännande och mer och mer otäckt för varje sida”<br>
+                – Centralskolans bibliotek</i></p><br><br>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

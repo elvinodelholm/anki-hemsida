@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hur Fel Kan De Bli</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="dark">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="../spanning/hur fel kan de bli ann-christine magnusson.jpg" alt="hur fel kan de bli">
+        </div>
+        <div class="text-block">
+            <p class="title">Hur Fel Kan De Bli</p>
+            <p>Ann-Christine Magnusson & Anna Knutsson</p>
+            <br>
+            <p>Fristående fortsättning på Hur svårt kan de va?<br><br>Några månader har gått. Björn och Julia har börjat på en gymnasieskola. Edith och Daniel har börjat på andra. Klassen har skingrats och Björn är inte längre mobbad. Nu när han har fått lugn och ro har han äntligen tid att komma på vem han är och börja ett nytt liv. Han söker upp en av sina gamla plågoandar och försöker få honom att be om ursäkt, men blir i stället utskrattad. Enormt mycket ilska bubblar upp efter alla år av att bli nedtryckt och Björn väljer att hämnas. Men mår han bättre av det?</p>
+            <br>
+        </div>
+        <div class="text-block-2">
+            <p><i>”…Modern ondska får sin giriga form.”</i><br>
+                – Dagens Nyheter<br><br>
+                
+               <i> ”Svårt att sluta läsa…”</i><br>
+                – Biblioteksbloggen<br><br>
+                
+                <i>”Jag dras återigen in i de fyra ungdomarnas liv. Kan inte sluta läsa och glömmer snart att det bara är en berättelse.”</i><br>
+                – Boktokig</p><br><br>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingen Ser Dig</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="dark">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="../spanning/ingen ser dig ann-christine magnusson.jpg" alt="ingen ser dig">
+        </div>
+        <div class="text-block">
+            <p class="title">Ingen Ser Dig</p>
+            <p>Ann-Christine Magnusson & Anna Knutsson</p>
+            <br>
+            <p>Att åka på vildmarksläger till Kilsbergen med sommarfritids är inte Miras önskedröm precis. Hon känner ingen där och tycker att de flesta verkar ganska tråkiga och dryga. Och fritidsledaren Kenneth Klack är faktiskt helt hysteriskt hurtig.
+                Redan första natten i skogen händer det som inte får hända - Kenneth Klack försvinner spårlöst. Barnen är plötsligt helt ensamma, vilse utan vare sig mat eller vatten.</p>
+            <br>
+            <a href=https://www.bokus.com/bok/9789129718102/ingen-ser-dig/>Till Butik ></a><br>
+        </div>
+        <div class="text-block-2">
+            <p>Boken vann första pris i Bokjuryn utgivningsåret.<br><br>
+
+                <I></I>”Jag kunde inte lägga ifrån mig boken förrän jag läst sista sidan.”</I><br>
+                – Heby kommuns bokblogg <br><br>
+                
+                <i>”Dramatisk och gastkramande läsning.”</i><br>
+                – Kortedala biblioteksblogg<br><br>
+                
+                <i>”Boken är ruskigt spännande. Ibland känns det som om man inte vågar läsa vidare.”</i><br>
+                – Borgholms biblioteksblogg</p><br><br>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

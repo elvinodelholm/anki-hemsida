@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingen Kommer Undan</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="dark">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="../spanning/ingen kommer undan ann-christine magnusson.jpg" alt="ingen kommer undan">
+        </div>
+        <div class="text-block">
+            <p class="title">Ingen Kommer Undan</p>
+            <p>Ann-Christine Magnusson & Anna Knutsson</p>
+            <p>Illustrerad av Lars Winnerbäck</p>
+
+            <br>
+            <p>Klass 6B ska åka på skolresa och Sebbe har längtat.  Han och Connor ska ha så kul. Men inget blir som de har tänkt sig.  De får uppleva saker de aldrig hade kunnat fantisera om. Men ingen tror dem. Ingen. Det här skulle bli dagar med kanoter, bad och korvgrillning. Istället kliver de rakt in i en mardröm.</p>
+            <br>
+            <a href=https://www.adlibris.com/se/bok/ingen-kommer-undan-9789172261877>Till Butik ></a><br>
+        </div>
+        <div class="text-block-2">
+            <p>Nominerad till Sveriges Bästa Barn och Ungdomsdeckare 2019 av Svenska Deckarakademien.<br><br>
+                <i>”Sommarens mest spännande bok för 11-15-åringen”…”fantastiska illustrationer”</i><br>
+                – Barnbokstugg<br><br>
+                
+                <i></i>”Bladvändare man inte glömmer”</i><br>
+                – Barn & Ungdomsbloggen<br><br>
+                
+                <i>”Otroligt spännande”</i><br>
+                – Lilla Bus Läser</p><br><br>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>

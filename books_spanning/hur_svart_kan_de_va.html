@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hur Svårt Kan De Va</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="dark">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="../spanning/hur svart kan de va ann-christine magnusson.jpg" alt="hur svårt kan de va">
+        </div>
+        <div class="text-block">
+            <p class="title">Hur Svårt Kan De Va</p>
+            <p>Ann-Christine Magnusson & Anna Knutsson</p>
+            <br>
+            <p>Bokens tre huvudpersoner Julia, Edit och Daniel går i samma klass i 9:an. Edit, den som alltid varit utanför, är desperat att skaffa sig ett annat liv och gör allt hon kan för att få vara med Julia och hennes kompisar. Julia finner Edit enbart irriterande och gör i sin tur allt hon kan för att hålla Edit borta. Daniel, som umgås med gymnasiekompisarna hellre än med klassen, råkar en dag se att Björn, klassens mobbningsoffer, går in på BUP. Björn är ju på semester i Florida, eller?
+                När Daniel råkar nämna för Julia vad han sett drabbas Julia genast av dåligt samvete och bestämmer sig för att ändra på Björns situation. Hon tar hjälp av Edit och tvingar också Daniel att hjälpa till. Det visar sig att de alla har olika minnesbilder av hur Björn har haft det i skolan.
+                </p>
+            <br>
+        </div>
+        <div class="text-block-2">
+            <p><i>”Imponerande tonårsskildring ur fyra synvinklar, ett slags William Faulkners ”Stormen och vreden” i Stockholm”</i><br>
+                – Dagens Nyheter<br>
+                <br>
+                <i>”Det är fint sammanvävt och var och en har fått sin egen röst..”</i><br>
+                – Sydsvenskan</p><br><br>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>
