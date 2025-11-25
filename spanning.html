@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spänning</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="dark">
+    <header class="dark">
+        <h1><a href="index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="index.html">Bilderböcker</a>
+                <a href="spanning.html">Spänning</a>
+                <a href="skapandeskola.html">Skapande Skola</a>
+                <a href="teatertv.html">Teater & Tv</a>
+                <a href="about.html">Om Mig</a>
+
+            </nav>
+        </div>
+    </header>
+    <main class="grid-container">
+       
+<div class="image-container">
+        <a href="books_spanning/trustville_kom_ensam.html">
+        <img src="spanning/trustville kom ensam ann-christine magnusson.jpg" alt="trustville kom ensam">
+        </a>
+ </div>
+<div class="image-container">
+    <a href="books_spanning/trustville_svinet.html">
+        <img src="spanning/trustville svinet ann-christine magnusson.jpg" alt="trustville svinet">
+    </a>
+</div>
+<div class="image-container">
+    <div class="award-text">Nominerad till<br>Crimetime Award</div>
+    <a href="books_spanning/trustville_bara_borjan.html">
+        <img src="spanning/trustville bara borjan ann-christine magnusson.jpg" alt="trustville bara borjan">
+    </a>
+</div>
+<div class="image-container">
+    <a href="books_spanning/trustville_andy.html">
+        <img src="spanning/trustville andy ann-christine magnusson.jpg" alt="trustville andy">
+    </a>
+</div>
+<div class="image-container">
+    <a href="books_spanning/trustville_andy.html">
+        <img src="spanning/trustville utvald ann-christine magnusson.png" alt="trustville andy">
+    </a>
+</div>
+<div class="image-container">
+    <div class="award-text">Nominerad till Sveriges<br> Bästa Ungdomsdeckare</div>
+    <a href="books_spanning/ingen_kommer_undan.html">
+        <img src="spanning/ingen kommer undan ann-christine magnusson.jpg" alt="ingen kommer undan">
+    </a>
+</div>
+<div class="image-container">
+    <div class="award-text">Första Pris<br>i Bokjuryn</div>
+    <a href="books_spanning/ingen_ser_dig.html">
+        <img src="spanning/ingen ser dig ann-christine magnusson.jpg" alt="ingen ser dig">
+    </a>
+</div>
+<div class="image-container">
+    <a href="books_spanning/hur_svart_kan_de_va.html">
+        <img src="spanning/hur svart kan de va ann-christine magnusson.jpg" alt="hur svart kan de va">
+    </a>
+</div>
+<div class="image-container">
+    <a href="books_spanning/hur_fel_kan_de_bli.html">
+        <img src="spanning/hur fel kan de bli ann-christine magnusson.jpg" alt="hur fel kan de bli">
+    </a>
+</div>
+
+
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>
+
+
+
