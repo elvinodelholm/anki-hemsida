@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bumbum åker forte</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="grid-container single-book-grid">
+        <div >
+            <img src="../teatertv assets/tappa-tand ann-christine magnusson.JPG" alt="Bumbum åker fort">
+        </div>
+        
+        <div class="text-block">
+            <p class="title">Tappa Tand!</p>
+            <p>Manus och Regi</p>
+            <br>
+            <p>
+                Tappa Tand är en barnpjäs om att längta så att det gör ont att få tappa sin första tand. Att längta efter att vara lika stor som storebror, som tappat fem tänder.
+                <br><br>
+                Läs mer på <a style="text-decoration: underline;" href="https://www.moliereensemblen.com/tappa-tand-4-8-ar/"> MoliéreEnsemblens hemsida</a>
+
+            </p>
+            <br>
+           
+        </div>
+        <div class="text-block-3">
+            <p>
+            <br><br><br><br>
+            </p>
+        </div>
+    </main>
+    
+   
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>
