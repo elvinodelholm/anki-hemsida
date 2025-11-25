@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.dark {
+    background-color: black; /* Pure white background */
+    color: white; /* Black text for contrast */
+}
+
+.bright{
+    background-color: white; /* Pure white background */
+    color: black; /* Black text for contrast */
+}
+
+.bright a{
+    color: black;
+}
+
+.dark a{
+    color: white;
+}
+
+.dark header a:visited{
+    color: white;
+}
+
+/* Ensuring menu button text color based on theme */
+.dark .menu-button {
+    color: white;
+}
+
+.bright .menu-button {
+    color: black;
+}
+
+/* Menu background color based on theme */
+.dark .menu-items {
+    background-color: black;
+}
+
+.bright .menu-items {
+    background-color: white;
+}
+
+/* Ensuring menu links have correct colors */
+.dark .menu-items a {
+    color: white;
+    background-color: black;
+}
+
+.bright .menu-items a {
+    color: black;
+    background-color: white;
+}
+
+/* Visited links should also match the theme */
+.dark .menu-items a:visited {
+    color: white;
+}
+
+.bright .menu-items a:visited {
+    color: black;
+}
+
+/* Hover effect remains the same for both themes */
+.menu-items a:hover {
+    color: #EF2A3C;
+}
+
+
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+header h1 a {
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+header h1 a:hover {
+    color: #EF2A3C
+    ;}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 1rem; /* Menu text size */
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-button:hover {
+    color: #EF2A3C; /* Subtle hover effect */
+}
+
+.menu-items {
+    display: none;
+    position: fixed;
+    animation: fadeIn 0.3s ease-out;
+    z-index: 1001;
+    max-height: calc(100vh - 20px); /* Prevent overflow */
+    overflow-y: auto; /* Add scroll if necessary */
+}
+
+.menu-items a {
+    display: block;
+    text-decoration: none;
+    background-color: white;
+    padding: 15px 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.menu-items a:hover {
+    color: #EF2A3C; /* Light grey hover effect */
+}
+
+.menu-active {
+    display: block;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px;
+    width: calc(100% - 20px); /* Ensures full width with consistent margins */
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1; /* Ensures squares */
+    background-color: #fff; /* Matches the grid container */
+}
+
+a {
+    text-decoration: none; /* Optional: Removes underline */
+}
+
+a:visited {
+}
+
+a:hover {
+    color: #EF2A3C; /* #EF2A3C when hovered */
+    text-decoration: none; /* Optional: Adds underline on hover */
+}
+
+a:focus, a:active {
+    color: black; /* Matches hover for focus and active states */
+}
+
+@media (min-width: 769px) {
+    .single-book-grid {
+        margin-top: 4.5vw; /* Adjust the margin as needed */
+    }
+
+    .title{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); /* One image per row */
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1rem; /* Same as menu text size */
+    }
+
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .title{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+
+-------
+
+
+
+
+
+
+.text-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1rem;
+    text-align: left;
+    color: #000;
+    border: 1px solid #ddd;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.text-block p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.text-block-2 {
+    display: flex;
+    font-size: 1rem;
+    text-align: left;
+    color: #EF2A3C;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.text-block-3 {
+    display: flex;
+    font-size: 1rem;
+    text-align: left;
+    color: black;
+    margin: 0;
+    line-height: 1.5;
+}
+
+
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+--------
+
+
+.image-container {
+    position: relative; /* Gör att innehåll kan placeras relativt till denna container */
+}
+
+.award-text {
+    position: absolute;
+    text-align: center;
+    top: -10px; /* Placering från övre kanten */
+    left: 30px; /* Placering från vänstra kanten */
+    background-color: black; /* Bakgrundsfärg */
+    border: 6px dotted white; /* Blå kant med stora prickar */
+    color: white; /* Textfärg */
+    font-size: 1rem; /* Textstorlek */
+    font-weight: bold;
+    padding: 35px 15px; /* Inre marginal */
+    border-radius: 30vw; /* Rundade hörn */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Skugga för djup */
+    z-index: 10; /* Säkerställer att texten ligger ovanpå bilden */
+}
+
+
+.link1 {
+    color: #EF2A3C;
+   
+}
+
+.link1 a {
+     color: #EF2A3C;
+    
+}
