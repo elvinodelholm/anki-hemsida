@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="index.html">Bilderböcker</a>
+                <a href="spanning.html">Spänning</a>
+                <a href="skapandeskola.html">Skapande Skola</a>
+                <a href="teatertv.html">Teater & Tv</a>
+                <a href="about.html">Om Mig</a>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="extra/skapande skola ann-christine magnusson.jpg" alt="pite och palt leker kurragömma">
+        </div>
+        
+        <div class="text-block">
+            <p>
+                Parallellt med skrivandet har jag skrivworkshop på skolor. Jag har arbetat fram en skrivmetod som fungerar även för dem som inte har självförtroende nog eller vana att låta sin röst höras i text. Det är något jag känner ett mycket starkt engagemang för. Barn och barns röster. Eleverna brukar slå sig själv med häpnad! Jag ser det som en demokratifråga att fler röster blir hörda.
+            </p>
+            <br>
+            <p>
+                Jag föreläser även för andra pedagoger, t.ex. på Stockholm dramatiska högskola, för att ge andra som arbetar med barn och unga bra verktyg för att få igång skrivandet hos barn.
+            </p>
+            <br>
+            <p>
+                <strong>För lärare:</strong> Man kan söka pengar via Skapande skola för att finansiera en skrivworkshop. Jag hjälper gärna till med ansökan.
+            </p>
+            <br>
+        </div>
+        
+        <div class="text-block">
+            <p>
+                <i>
+                    ”Ann-Christine klev in i mitt klassrum och tog eleverna med storm. På sitt positiva och
+                    entusiasmerande vis lyckades hon få alla elever att tro på sin förmåga att skriva. Hon sådde ett litet
+                    författarfrö hos mina elever och jag ser att de numera använder sig av de konkreta enkla tips som hon gav dem.”
+                </i>
+            </p>
+            <p>– Anna Fahlin, lärare i åk 5 Aspuddens skola</p>
+            <br>
+            <p>
+                <i>
+                    ”Mycket inspirerande att möta en yrkesverksam författare och skrivpedagog som verkligen fokuserar på barns
+                    berättande ur ett demokratiskt perspektiv. Vilka berättelser får höras? Vilka erfarenheter blir norm? Gav
+                    konkreta arbetsmetoder som är användbara i allt gestaltande arbete med barn/unga.”
+                </i>
+            </p>
+            <p>– Sara Berg, kursdeltagare på Stockholms dramatiska högskola</p>
+            <br>
+            <p>
+                <i>
+                    ”Jag har lärt mig super mycket! Det har varit jättekul med skapande skola och det är mycket lättare att
+                    skriva berättelser nu.”
+                </i>
+            </p>
+            <p>– Lovisa, elev i åk 6 Eriksbergsskolan</p>
+            <br>
+            <p><a href="mailto:ankiliimagnusson@gmail.com">ankiliimagnusson@gmail.com</a></p>
+
+        </div>
+        
+        
+       
+
+    </main>
+    
+   
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>
