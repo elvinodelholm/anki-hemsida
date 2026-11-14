@@ -1,6 +1,7 @@
 :root {
-    --accent: #6ADBFF; /* Cyan accentfärg */
-    --beige: #EEE7D9; /* Bakgrund för Aktuellt */
+    --accent: #9FE2C8; /* Mint accentfärg, full styrka i bannern */
+    --aktuellt-bg: #F2F2F2; /* Aktuellt-rutan: ljusgrå */
+    --notis-bg: #E4E4E4; /* Notiserna: grå */
 }
 
 * {
@@ -326,12 +327,24 @@ a:focus, a:active {
     gap: 32px;
 }
 
-.banner h2 {
+/* De fyra vägarna vidare är bannerns stora rubrik */
+.banner-nav a {
+    display: block;
+    width: fit-content;
+    color: black;
     font-size: clamp(2.6rem, 5.2vw, 5.6rem);
     font-weight: 500;
-    line-height: 0.92;
+    line-height: 0.95;
     letter-spacing: -0.035em;
-    margin-bottom: 14px;
+    text-decoration: none;
+}
+
+.banner-nav a:hover,
+.banner-nav a:focus {
+    color: black;
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.08em;
 }
 
 .banner-links a {
@@ -374,58 +387,50 @@ a:focus, a:active {
     display: block;
 }
 
-/* Aktuellt: beige ruta med en cyan banner per notis */
+/* Aktuellt: ljusgrå ruta med en grå banner per notis */
 
 .aktuellt {
     margin: 10px;
     padding: 10px;
-    background: var(--beige);
+    background: var(--aktuellt-bg);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .aktuellt-rubrik {
-    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+    font-size: clamp(1.2rem, 1.6vw, 1.5rem);
     font-weight: 500;
     line-height: 1;
-    letter-spacing: -0.03em;
-    padding: 2px 2px 12px;
+    letter-spacing: -0.02em;
+    padding: 2px 2px 10px;
 }
 
 .aktuellt-lista {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 10px;
 }
 
+/* Varje notis är ett långsmalt block i full bredd */
 .notis {
-    background: var(--accent);
+    background: var(--notis-bg);
     color: black;
-    padding: 10px 12px 14px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 24px;
-    min-height: 240px;
+    padding: 10px 12px;
 }
 
 .notis h3 {
-    font-size: clamp(1.35rem, 1.9vw, 1.9rem);
+    font-size: clamp(1.05rem, 1.3vw, 1.25rem);
     font-weight: 500;
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-    margin-bottom: 12px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 6px;
 }
 
-.notis-bilder {
-    display: flex;
-    gap: 8px;
+.notis .banner-links a {
+    font-size: 0.9rem;
 }
 
-.notis-bilder img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    display: block;
+.notis h3:only-child {
+    margin-bottom: 0;
 }
 
 #bilderbocker, #spanning, #teatertv {
@@ -445,13 +450,5 @@ a:focus, a:active {
 
     .banner-text {
         min-height: 420px;
-    }
-
-    .aktuellt-lista {
-        grid-template-columns: 1fr;
-    }
-
-    .notis {
-        min-height: 0;
     }
 }
