@@ -1,3 +1,7 @@
+:root {
+    --accent: #6ADBFF; /* Cyan accentfärg */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -70,7 +74,7 @@ body {
 
 /* Hover effect remains the same for both themes */
 .menu-items a:hover {
-    color: #EF2A3C;
+    color: var(--accent);
 }
 
 
@@ -95,7 +99,7 @@ header h1 a {
 }
 
 header h1 a:hover {
-    color: #EF2A3C
+    color: var(--accent)
     ;}
 
 header h1 {
@@ -114,7 +118,7 @@ header h1 {
 }
 
 .menu-button:hover {
-    color: #EF2A3C; /* Subtle hover effect */
+    color: var(--accent); /* Subtle hover effect */
 }
 
 .menu-items {
@@ -136,7 +140,7 @@ header h1 {
 }
 
 .menu-items a:hover {
-    color: #EF2A3C; /* Light grey hover effect */
+    color: var(--accent); /* Light grey hover effect */
 }
 
 .menu-active {
@@ -180,7 +184,7 @@ a:visited {
 }
 
 a:hover {
-    color: #EF2A3C; /* #EF2A3C when hovered */
+    color: var(--accent); /* var(--accent) when hovered */
     text-decoration: none; /* Optional: Adds underline on hover */
 }
 
@@ -237,7 +241,7 @@ a:focus, a:active {
     display: flex;
     font-size: 1rem;
     text-align: left;
-    color: #EF2A3C;
+    color: var(--accent);
     margin: 0;
     line-height: 1.5;
 }
@@ -281,11 +285,22 @@ a:focus, a:active {
 
 
 .link1 {
-    color: #EF2A3C;
+    color: var(--accent);
    
 }
 
 .link1 a {
-     color: #EF2A3C;
+     color: var(--accent);
     
+}
+
+
+/* Cyan är för ljus som textfärg på vitt. På ljusa sidor markeras
+   textlänkar i stället med cyan bakgrund och svart text. */
+.bright header a:hover,
+.bright .menu-button:hover,
+.bright .menu-items a:hover,
+.bright .text-block a:hover {
+    color: black;
+    background-color: var(--accent);
 }
