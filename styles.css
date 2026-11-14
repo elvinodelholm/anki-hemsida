@@ -1,5 +1,6 @@
 :root {
     --accent: #6ADBFF; /* Cyan accentfärg */
+    --beige: #EEE7D9; /* Bakgrund för Aktuellt */
 }
 
 * {
@@ -303,4 +304,154 @@ a:focus, a:active {
 .bright .text-block a:hover {
     color: black;
     background-color: var(--accent);
+}
+
+
+/* ---------- Startsida ---------- */
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: clamp(440px, 42vw, 760px);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.banner-text {
+    background: var(--accent);
+    color: black;
+    padding: 10px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.banner h2 {
+    font-size: clamp(2.6rem, 5.2vw, 5.6rem);
+    font-weight: 500;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    margin-bottom: 14px;
+}
+
+.banner-links a {
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    margin-right: 14px;
+    white-space: nowrap;
+}
+
+.banner-links a:hover,
+.banner-links a:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.banner-body {
+    font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    max-width: 30em;
+}
+
+.banner-body p + p {
+    margin-top: 0.8em;
+}
+
+.banner-img {
+    overflow: hidden;
+}
+
+.banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 40% 30%;
+    display: block;
+}
+
+/* Aktuellt: beige ruta med en cyan banner per notis */
+
+.aktuellt {
+    margin: 10px;
+    padding: 10px;
+    background: var(--beige);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.aktuellt-rubrik {
+    font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    padding: 2px 2px 12px;
+}
+
+.aktuellt-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.notis {
+    background: var(--accent);
+    color: black;
+    padding: 10px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    min-height: 240px;
+}
+
+.notis h3 {
+    font-size: clamp(1.35rem, 1.9vw, 1.9rem);
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
+}
+
+.notis-bilder {
+    display: flex;
+    gap: 8px;
+}
+
+.notis-bilder img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+}
+
+#bilderbocker, #spanning, #teatertv {
+    scroll-margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .banner-img {
+        order: -1;
+        aspect-ratio: 1 / 0.9;
+    }
+
+    .banner-text {
+        min-height: 420px;
+    }
+
+    .aktuellt-lista {
+        grid-template-columns: 1fr;
+    }
+
+    .notis {
+        min-height: 0;
+    }
 }
