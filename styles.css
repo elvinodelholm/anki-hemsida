@@ -228,26 +228,6 @@ a:focus, a:active {
 
 
 
--------
-
-
-
-
-
-
-.text-block {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    font-size: 1rem;
-    text-align: left;
-    color: #000;
-    border: 1px solid #ddd;
-    margin: 0;
-    line-height: 1.5;
-}
-
 .text-block p {
     margin: 0;
     line-height: 1.5;
@@ -282,13 +262,6 @@ a:focus, a:active {
 
 
 
-
---------
-
-
-.image-container {
-    position: relative; /* Gör att innehåll kan placeras relativt till denna container */
-}
 
 .award-text {
     position: absolute;
