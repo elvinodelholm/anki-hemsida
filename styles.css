@@ -1,3 +1,9 @@
+:root {
+    --accent: #9FE2C8; /* Mint accentfärg, full styrka i bannern */
+    --aktuellt-bg: #F2F2F2; /* Aktuellt-rutan: ljusgrå */
+    --notis-bg: #E4E4E4; /* Notiserna: grå */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -70,7 +76,7 @@ body {
 
 /* Hover effect remains the same for both themes */
 .menu-items a:hover {
-    color: #EF2A3C;
+    color: var(--accent);
 }
 
 
@@ -95,7 +101,7 @@ header h1 a {
 }
 
 header h1 a:hover {
-    color: #EF2A3C
+    color: var(--accent)
     ;}
 
 header h1 {
@@ -114,7 +120,7 @@ header h1 {
 }
 
 .menu-button:hover {
-    color: #EF2A3C; /* Subtle hover effect */
+    color: var(--accent); /* Subtle hover effect */
 }
 
 .menu-items {
@@ -136,7 +142,7 @@ header h1 {
 }
 
 .menu-items a:hover {
-    color: #EF2A3C; /* Light grey hover effect */
+    color: var(--accent); /* Light grey hover effect */
 }
 
 .menu-active {
@@ -180,7 +186,7 @@ a:visited {
 }
 
 a:hover {
-    color: #EF2A3C; /* #EF2A3C when hovered */
+    color: var(--accent); /* var(--accent) when hovered */
     text-decoration: none; /* Optional: Adds underline on hover */
 }
 
@@ -237,7 +243,7 @@ a:focus, a:active {
     display: flex;
     font-size: 1rem;
     text-align: left;
-    color: #EF2A3C;
+    color: var(--accent);
     margin: 0;
     line-height: 1.5;
 }
@@ -281,11 +287,168 @@ a:focus, a:active {
 
 
 .link1 {
-    color: #EF2A3C;
+    color: var(--accent);
    
 }
 
 .link1 a {
-     color: #EF2A3C;
+     color: var(--accent);
     
+}
+
+
+/* Cyan är för ljus som textfärg på vitt. På ljusa sidor markeras
+   textlänkar i stället med cyan bakgrund och svart text. */
+.bright header a:hover,
+.bright .menu-button:hover,
+.bright .menu-items a:hover,
+.bright .text-block a:hover {
+    color: black;
+    background-color: var(--accent);
+}
+
+
+/* ---------- Startsida ---------- */
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: clamp(440px, 42vw, 760px);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.banner-text {
+    background: var(--accent);
+    color: black;
+    padding: 10px 14px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+/* De fyra vägarna vidare är bannerns stora rubrik */
+.banner-nav a {
+    display: block;
+    width: fit-content;
+    color: black;
+    font-size: clamp(2.6rem, 5.2vw, 5.6rem);
+    font-weight: 500;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    text-decoration: none;
+}
+
+.banner-nav a:hover,
+.banner-nav a:focus {
+    color: black;
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.08em;
+}
+
+.banner-links a {
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    margin-right: 14px;
+    white-space: nowrap;
+}
+
+.banner-links a:hover,
+.banner-links a:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.banner-body {
+    font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    max-width: 30em;
+}
+
+.banner-body p + p {
+    margin-top: 0.8em;
+}
+
+.banner-img {
+    overflow: hidden;
+}
+
+.banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 40% 30%;
+    display: block;
+}
+
+/* Aktuellt: ljusgrå ruta med en grå banner per notis */
+
+.aktuellt {
+    margin: 10px;
+    padding: 10px;
+    background: var(--aktuellt-bg);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.aktuellt-rubrik {
+    font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    padding: 2px 2px 10px;
+}
+
+.aktuellt-lista {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+/* Varje notis är ett långsmalt block i full bredd */
+.notis {
+    background: var(--notis-bg);
+    color: black;
+    padding: 10px 12px;
+}
+
+.notis h3 {
+    font-size: clamp(1.05rem, 1.3vw, 1.25rem);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 6px;
+}
+
+.notis .banner-links a {
+    font-size: 0.9rem;
+}
+
+.notis h3:only-child {
+    margin-bottom: 0;
+}
+
+#bilderbocker, #spanning, #teatertv {
+    scroll-margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .banner-img {
+        order: -1;
+        aspect-ratio: 1 / 0.9;
+    }
+
+    .banner-text {
+        min-height: 420px;
+    }
 }

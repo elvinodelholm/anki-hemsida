@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leka med Vatten</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bright">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="../bilderbocker/uppfinnarjohanna leka med vatten ann-christine magnusson.jpg" alt="leka med vatten">
+        </div>
+        <div class="text-block">
+            <p class="title">Leka med Vatten</p>
+            <p>Ann-Christine Magnusson & Lovisa Lesse</p>
+            <br>
+            <p>
+                Spola, samla, hälla. I Leka med vatten möter vi Lilla UppfinnarJohanna för första gången.
+                <br><br>
+                Johanna provar vad som flyter och vad som sjunker. Vad händer när hon håller ner något under vattnet?
+                <br><br>
+                En färgstark pekbok med få ord, tydliga bilder och mycket att prata om. En bok som inspirerar små barn att leka, undersöka och prova själva. I boken används konkreta verb som spola, hälla, sjunka och flyta och i bilderna syns saker som hink, anka och skiftnyckel.
+            </p>
+            <br>
+            <a href="https://olika.nu/products/leka-med-vatten-pekbok-om-teknik-for-de-yngsta">Till Butik ></a>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px';
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>
