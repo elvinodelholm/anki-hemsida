@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trustville Du Ser Mig</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="dark">
+    <header>
+        <h1><a href="../index.html">Ann-Christine Magnusson</a></h1>
+        <div style="position: relative;">
+            <button class="menu-button" onclick="toggleMenu()">Menu</button>
+            <nav class="menu-items" id="menu">
+                <a href="../index.html">Bilderböcker</a>
+                <a href="../spanning.html">Spänning</a>
+                <a href="../skapandeskola.html">Skapande Skola</a>
+                <a href="../about.html">Om Mig</a>
+            </nav>
+        </div>
+    </header>
+    <main class="grid-container single-book-grid">
+        <div class="image-container">
+            <img src="../spanning/trustville du ser mig ann-christine magnusson.jpg" alt="trustville du ser mig">
+        </div>
+        <div class="text-block">
+            <p class="title">Trustville 6 – Du Ser Mig</p>
+            <p>Ann-Christine Magnusson & Anna Knutsson</p>
+            <br>
+            <p>I den avslutande delen i den spännande Trustville-serien ställs allt på sin spets. Jill har mycket att förlora på att berätta sanningen om vem hon själv är.
+                <br><br>
+                Den slutgiltiga katastrofen är på väg att ske i Trustville. Något som kommer att försätta alla i staden i oändlig sorg. När Jills lillebror Maison går med i Sallys nya barngrupp försöker Jill övertyga sig själv om att hon bara är överbeskyddande. Men Sally har förändrats. Och barnen flockas runt henne. Någon viskar om ett födelsedagskalas. För Benjamin. Problemet är bara att ingen verkar veta vem Benjamin är OddBill försöker varna de vuxna i Trustville men ingen lyssnar.
+                <br><br>
+                Så nu måste Jill bestämma sig. Ska hon fortsätta låtsas vara normal – eller våga berätta sanningen ...</p>
+            <br>
+            <a href="https://www.adlibris.com/sv/bok/du-ser-mig-9789172269736">Till Butik ></a><br><br>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const button = document.querySelector('.menu-button');
+            const rect = button.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+
+            // Dynamically position the menu
+            menu.style.top = `${Math.min(rect.bottom + 5, viewportHeight - menu.offsetHeight - 10)}px`;
+            menu.style.right = '10px'; // Align to the right edge with some margin
+            menu.classList.toggle('menu-active');
+        }
+    </script>
+</body>
+</html>
