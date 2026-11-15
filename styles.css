@@ -330,31 +330,7 @@ a:focus, a:active {
 .banner-text {
     background: var(--accent);
     color: black;
-    padding: 10px 14px 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 32px;
-}
-
-/* De fyra vägarna vidare är bannerns stora rubrik */
-.banner-nav a {
-    display: block;
-    width: fit-content;
-    color: black;
-    font-size: clamp(2.6rem, 5.2vw, 5.6rem);
-    font-weight: 500;
-    line-height: 0.95;
-    letter-spacing: -0.035em;
-    text-decoration: none;
-}
-
-.banner-nav a:hover,
-.banner-nav a:focus {
-    color: black;
-    text-decoration: underline;
-    text-decoration-thickness: 0.06em;
-    text-underline-offset: 0.08em;
+    padding: 42px 14px 16px;
 }
 
 .banner-links a {
@@ -374,11 +350,11 @@ a:focus, a:active {
 }
 
 .banner-body {
-    font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+    font-size: clamp(1.6rem, 2.6vw, 2.5rem);
     font-weight: 500;
-    line-height: 1.12;
-    letter-spacing: -0.01em;
-    max-width: 30em;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    max-width: 22em;
 }
 
 .banner-body p + p {
@@ -443,8 +419,42 @@ a:focus, a:active {
     margin-bottom: 0;
 }
 
-#bilderbocker, #spanning, #teatertv {
-    scroll-margin-top: 70px;
+/* Vägar vidare: ett bildkort per kategori längst ner på startsidan */
+.vagar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.vag {
+    display: block;
+    color: black;
+}
+
+.vag img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.vag span {
+    display: block;
+    font-size: clamp(1.2rem, 1.8vw, 1.7rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    padding: 8px 0 4px;
+}
+
+.vag:hover,
+.vag:focus {
+    color: black;
+}
+
+.vag:hover span {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -460,5 +470,9 @@ a:focus, a:active {
 
     .banner-text {
         min-height: 420px;
+    }
+
+    .vagar {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
