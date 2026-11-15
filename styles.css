@@ -307,10 +307,8 @@ a:focus, a:active {
 }
 
 
-/* Cyan är för ljus som textfärg på vitt. På ljusa sidor markeras
-   textlänkar i stället med cyan bakgrund och svart text. */
-.bright header a:hover,
-.bright .menu-button:hover,
+/* Accentfärgen är för ljus som textfärg på vitt. På ljusa sidor markeras
+   textlänkar i stället med accentfärgad bakgrund och svart text. */
 .bright .menu-items a:hover,
 .bright .text-block a:hover {
     color: black;
@@ -457,6 +455,35 @@ a:focus, a:active {
     text-decoration: underline;
 }
 
+/* Luft under blocken innan sidfoten */
+.vagar {
+    margin-bottom: 60px;
+}
+
+/* Mini-sidfot */
+.sidfot {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    padding: 16px 20px;
+    background: var(--aktuellt-bg);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.sidfot a {
+    color: black;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.sidfot a:hover,
+.sidfot a:focus {
+    color: black;
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .banner {
         grid-template-columns: 1fr;
@@ -475,4 +502,31 @@ a:focus, a:active {
     .vagar {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+
+/* Namnet och Meny i sidhuvudet är markerade i accentfärg som standard.
+   När man håller muspekaren över dem försvinner markeringen. */
+.bright header h1 a,
+.bright header h1 a:visited,
+.dark header h1 a,
+.dark header h1 a:visited,
+.bright header .menu-button,
+.dark header .menu-button {
+    color: black;
+    background-color: var(--accent);
+}
+
+.bright header h1 a:hover,
+.bright header h1 a:focus,
+.bright header .menu-button:hover {
+    color: black;
+    background-color: transparent;
+}
+
+.dark header h1 a:hover,
+.dark header h1 a:focus,
+.dark header .menu-button:hover {
+    color: white;
+    background-color: transparent;
 }
