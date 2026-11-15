@@ -92,6 +92,16 @@ header {
     z-index: 1000;
 }
 
+/* Sidhuvudet följer med vid scroll och får sidans bakgrundsfärg,
+   så att innehållet inte syns igenom det */
+.bright header {
+    background-color: white;
+}
+
+.dark header {
+    background-color: black;
+}
+
 
 
 header h1 a {
